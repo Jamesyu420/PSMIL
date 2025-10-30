@@ -1,0 +1,13 @@
+`database` is the local hard disk to save the public dataset from https://camelyon17.grand-challenge.org/Data/.
+
+/database/datasets/CAMELYON16/
+.
+├── testing
+│   ├── evaluation
+│   ├── images
+│   ├── lesion_annotations.zip
+│   └── reference.csv
+└── training
+    ├── lesion_annotations.zip
+    ├── normal
+    └── tumor
