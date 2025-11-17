@@ -4,10 +4,11 @@ This repository provides reproducible codes for the following working paper:
 
 > Yu, B., Li, X., Zhou, J., and Wang, H. Detecting Breast Carcinoma Metastasis on Whole-Slide Images by Partially Subsampled Multiple Instance Learning, Working Paper.
 
+For an easy application of the proposed PSMIL method in this paper, you may also call the [PSMIL](https://test.pypi.org/project/PSMIL/) package.
+
 ## Overview
 
 This repository contains three parts: the first covers simulation studies to validate the finite sample performance of the proposed estimators, the second focuses on robustness analysis, and the third presents real data analysis on the CAMELYON16 dataset.
-
 
 The file tree of the repository is as follows:
 
@@ -70,29 +71,17 @@ The following code files in the `RealDataAnalysis` folder can be used to reprodu
 
 ```
 ├── RealDataAnalysis
-│   ├── UNI_512_A75
-│   └── pytorch_model.bin
-```
-
-- `pytorch_model.bin` is the model file, which is not involved in this repository due to its size. It can be requested via email or downloaded at [Hugging Face](https://huggingface.co/MahmoodLab/UNI). The folder `UNI_512_A75` contains the experiment for a sub-image size of 512 and the 75% definition of $A_{im}$, whose file tree is given as follows:
-
-```
-├── UNI_512_A75
 │   ├── LICENSE
-│   ├── README.md
-│   ├── assets
 │   ├── estimation.py
-│   ├── exper.py
 │   ├── gentrain.py
 │   ├── mul_gentest.py
 │   ├── pred.py
-│   ├── setup.py
 │   ├── sin_gentest.py
-│   ├── train_est_KMeansInsinit.py
-│   ├── uni
-│   ├── uni.egg-info
+│   ├── train_est.py
 │   └── utils.py
 ```
+
+The CAMELYON16 dataset can be downloaded at [its official website](https://camelyon16.grand-challenge.org/Data/). Please also note that the model file `pytorch_model.bin` is not involved in this repository due to its size. It can be obtained via email or downloaded at [Hugging Face](https://huggingface.co/MahmoodLab/UNI).
 
 Below are instructions on how to execute the scripts:
 
@@ -110,7 +99,7 @@ python mul_gentest.py
 Next, we apply the proposed estimators to estimate the unknown parameters.
 
 ```
-python train_est_KMeansInsinit.py
+python train_est.py
 ```
 
 ### Step 3. Prediction
