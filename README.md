@@ -112,4 +112,4 @@ python pred.py
 
 ## Contact
 
-If you have any problem, please feel free to contact [Baichen Yu](baichen.yu@stu.pku.edu.cn) and [Prof. Xuetong Li](xtong_li@xjtu.edu.cn).
+If you have any problem, please feel free to contact [Baichen Yu](mailto:baichen.yu@stu.pku.edu.cn) and [Prof. Xuetong Li](mailto:xtong_li@xjtu.edu.cn).
